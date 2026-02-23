@@ -1,0 +1,917 @@
+/* --------------------------------------------------------------------
+FONTS
+-------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+h1, h2, h3, a, button {
+    font-family: "Bitcount Prop Single", sans-serif !important;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* --------------------------------------------------------------------
+CURSOR
+-------------------------------------------------------------------- */
+* {
+    cursor: url("Logo-Cursor/normal.cur"), auto !important;
+}
+
+/* --------------------------------------------------------------------
+RESPONSIVIDADE
+-------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    h1 { font-size: 2.2rem; }
+    .info { width: 85%; }
+    .member-photo { width: 35%; }
+    #carouselExampleFade { margin: 40px 80px; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
+    .about-photos { flex-direction: column; }
+    .album-cards-container { flex-direction: column; gap: 20px; }
+    .member-photo { width: 50%; margin: 10px auto; }
+    .unit { max-width: 90%; margin: 15px auto; }
+    #carouselExampleFade { margin: 10px 20px; }
+}
+
+@media (max-width: 576px) {
+    header { font-size: 0.5rem; }
+    h1 { font-size: 1.2rem; }
+    h2 { font-size: 1rem; }
+    body { font-size: 0.95rem; }
+    .info, .unit, .album-card, .tour-videos { width: 95%; margin: 10px auto; }
+    .member-photo { width: 80%; }
+    .about-photos, .album-cards-container { flex-direction: column; }
+    #carouselExampleFade { margin: 10px 5px; }
+}
+
+/* --------------------------------------------------------------------
+BODY
+-------------------------------------------------------------------- */
+body {
+    color: #484948;
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------
+CABEÇALHO
+-------------------------------------------------------------------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+#logo {
+    margin: 5px;
+    width: 100px;
+}
+
+.cabeçalho {
+    background-color: #FFC5D3;
+    padding: 10px 20px;
+    box-shadow: 0 1px 7px #484948;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    float: left;
+    white-space: nowrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.menu a {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.menu a:hover {
+    color: #D7707E;
+    text-decoration: none;
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+
+.nav-icons {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    gap: 15px;
+}
+
+.nav-icons .nav-link {
+    color: #484948;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav-icons .nav-link:hover {
+    color: #D7707E;
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+/* --------------------------------------------------------------------
+SECTIONS
+-------------------------------------------------------------------- */
+#bem-vindo {
+    padding: 10px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 2px 2px 5px #D7707E;
+    width: 70%;
+    max-width: 900px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.section-titulo {
+    padding: 10px;
+    border-radius: 20px;
+    width: 70%;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 2px 2px 5px #D7707E;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------
+HOME
+-------------------------------------------------------------------- */
+#carouselExampleFade {
+    margin: 40px 200px;
+    box-shadow: 2px 2px 5px #D7707E;
+    border-radius: 20px;
+}
+
+.page_img {
+    border-radius: 20px;
+}
+
+.links {
+    color: #D7707E;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.links:hover {
+    color: #D7707E;
+    text-decoration: none;
+    border: 1px solid #D7707E;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #D7707E;
+}
+
+/* --------------------------------------------------------------------
+RODAPÉ
+-------------------------------------------------------------------- */
+.rodapé {
+    background-color: #FFC5D3;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -1px 7px #484948;
+    width: 100%;
+}
+
+.highlights {
+    color: #D7707E;
+}
+
+#redes-sociais {
+    justify-content: center ;
+    color: #484948;
+    flex-direction: row;
+}
+
+#redes-sociais a {
+    transition: all 0.3s ease;
+}
+
+#redes-sociais a:hover {
+    color: #D7707E;
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+.icon-item {
+    margin: 0 10px;
+}
+
+/* --------------------------------------------------------------------
+SOBRE
+-------------------------------------------------------------------- */
+.about-photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.unit {
+    width: 40%;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #D7707E;
+}
+
+.info {
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------
+ACCORDION
+-------------------------------------------------------------------- */
+.accordion-item {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.accordion-button {
+    background-color: #FFC5D3;
+    color: #484948;
+    box-shadow: none !important;
+    font-family: "Bitcount Prop Single", sans-serif;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #FFC5D3;
+    color: #484948;
+}
+
+.accordion-body {
+    text-align: center;
+}
+
+.member-photo {
+    width: 30%;
+    border-radius: 10px;
+    border-color: #D7707E;
+    margin: 4px;
+}
+
+/* --------------------------------------------------------------------
+TABELAS
+-------------------------------------------------------------------- */
+table {
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+    margin: 8px;
+
+}
+
+th, td {
+    width: 50%;
+    padding: 8px;
+    color: #484948;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+th {
+    background-color: #FFE6EE;
+}
+
+td {
+    background-color: lightyellow;
+}
+
+/* --------------------------------------------------------------------
+ALBUNS
+-------------------------------------------------------------------- */
+.segundo-titulo {
+    padding: 10px;
+    border-radius: 20px;
+    width: 70%;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #FFC5D3;
+    box-shadow: 2px 2px 5px #D7707E;
+}
+
+.album-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 20px;
+}
+
+.album-card {
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #D7707E;
+    margin: 20px;
+    max-width: 100%;
+    transition: all 0.3s ease;
+    width: 18rem
+}
+
+.album-card:hover {
+    box-shadow: 4px 4px 10px #D7707E;
+    transform: scale(1.03);
+}
+
+
+.card-img-top {
+    border-radius: 20px 20px 0 0;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-family: "Bitcount Prop Single", sans-serif;
+    font-weight: 600;
+}
+
+
+/* --------------------------------------------------------------------
+FORMULÁRIO DE CONTACTO
+-------------------------------------------------------------------- */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #D7707E;
+}
+
+.form-control:focus {
+    border-color: #D7707E;
+    box-shadow: 0 0 5px #D7707E;
+    outline: none;
+}
+
+#enviar-btn {
+    border-radius: 20px;
+    background-color: lightyellow;
+    color: #484948;
+    font-family: "Bitcount Prop Single", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 4px 20px;
+}
+
+#enviar-btn:hover {
+    background-color: #FFC5D3;
+    color: #D7707E;
+    box-shadow: 2px 2px 5px #D7707E;
+}
+
+/* --------------------------------------------------------------------
+TOUR
+-------------------------------------------------------------------- */
+#titulo-encore {
+    padding: 10px;
+    border-radius: 20px;
+    width: 70%;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 2px 2px 5px #D7707E;
+}
+
+.tour-videos-container {
+    display: inline-block;
+    width: 70%;
+}
+
+.tour-videos {
+    width: 90%;
+    margin: 10px;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #D7707E;
+    transition: 0.3s ease;
+}
+
+.tour-videos:hover {
+    transform: scale(1.03);
+}
+
+.tour-dates {
+    margin: 20px;
+}
+
+/* --------------------------------------------------------------------
+FILTRAR PRODUTOS
+-------------------------------------------------------------------- */
+#category-filter {
+    padding: 8px 12px;
+    border: 2px solid #D7707E;
+    background-color: #FFC5D3;
+    color: #484948;
+    font-size: 1rem;
+    outline: none;
+    width: 80%;
+    max-width: 250px;
+    font-family: "Bitcount Prop Single", sans-serif;
+}
+
+#filter {
+    font-size: 1.5rem;
+}
+
+.filter-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* --------------------------------------------------------------------
+CONTAINER DE PRODUTOS
+-------------------------------------------------------------------- */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* --------------------------------------------------------------------
+CARD DE PRODUTOS
+-------------------------------------------------------------------- */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    width: 33.3%;
+    flex: 1 1 250px;
+    min-width: 350px;
+    max-width: 350px;
+    box-shadow: 2px 2px 5px #D7707E;
+    margin: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    
+}
+
+.product:hover {
+    transform: scale(1.03);
+}
+
+.product-card-img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* --------------------------------------------------------------------
+BOTOES
+-------------------------------------------------------------------- */
+.details-btn, 
+.registar-btn,
+.adicionar-btn,
+.logout-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #FFC5D3;
+    color: #484948;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px #D7707E;
+
+}
+
+.details-btn:hover, 
+.registar-btn:hover,
+.adicionar-btn:hover,
+.logout-btn:hover {
+    background-color: #D7707E;
+    color: white;
+}
+
+.btn-danger,
+.btn-success,
+.btn-secondary {
+    padding: 8px 12px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px #D7707E;
+}
+
+.btn-danger:hover,
+.btn-success
+.btn-secondary:hover {
+    background-color: #484948;
+}
+
+/* --------------------------------------------------------------------
+LIGHTBOX
+-------------------------------------------------------------------- */
+#lightbox {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+#lightbox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #D7707E;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.95);
+    transition: transform 0.4s ease;
+}
+
+#lightbox.show .lightbox-content {
+    transform: scale(1);
+}
+
+#lightbox-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    margin: 10px 0;
+    display: block;
+}
+
+#lightbox-description {
+    opacity: 80%;
+}
+
+.lightbox-nav {
+    display: none;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFC5D3;
+    color: #484948;
+    font-weight: 600;
+    box-shadow: 2px 2px 10px #D7707E;
+    transition: all 0.3s ease;
+}
+
+.lightbox-nav:hover {
+    background-color: #D7707E;
+    color: white;
+}
+
+/* --------------------------------------------------------------------
+BOTÃO DE CALCULAR VALORES
+-------------------------------------------------------------------- */
+#open-calc {
+    padding: 8px 12px;
+    border: none;
+    background-color: #FFC5D3;
+    color: #484948;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px #D7707E;
+    margin-right: 40px;
+    width: 250px;
+}
+
+#open-calc:hover {
+    background-color: #D7707E;
+    color: white;
+}
+
+/* --------------------------------------------------------------------
+CALCULADORA
+-------------------------------------------------------------------- */
+#order-form {
+    position: fixed;
+    top: 27%;
+    right: -420px;
+    transform: translateY(-50%);
+    width: 350px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #D7707E;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+#order-form.active {
+    right: 20px;
+}
+
+#calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#product, #quantity {
+    padding: 8px 12px;
+    border: 2px solid #D7707E;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 250px;
+    outline: none;
+    font-family: "Bitcount Prop Single", sans-serif;
+}
+
+#product {
+    cursor: pointer;
+    background-color: #FFC5D3;
+    color: #484948;
+}
+
+#quantity {
+    background-color: white;
+    color: #484948;
+}
+
+#calculate {
+    padding: 8px 20px;
+    border: 2px solid #D7707E;
+    background-color: #FFC5D3;
+    color: #484948;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#calculate:hover {
+    background-color: #D7707E;
+    color: white;
+}
+
+#value-box {
+    border: 2px solid #D7707E;
+    margin: 30px;
+    flex-direction: column;
+}
+
+#total-value-text {
+    margin-top: 10px;
+}
+
+#total-value {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #D7707E;
+    font-family: "Bitcount Prop Single", sans-serif;
+}
+
+/* --------------------------------------------------------------------
+REGISTO E LOGIN
+-------------------------------------------------------------------- */
+#tipo-user {
+    padding: 8px 12px;
+    border: 2px solid #D7707E;
+    background-color: #FFC5D3;
+    color: #484948;
+    font-size: 1rem;
+    outline: none;
+    font-family: "Bitcount Prop Single", sans-serif;
+    border-radius: 20px;
+}
+
+#caixa-registo {
+    display: block;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px;
+    margin-bottom: 77px;
+    border: 2px solid #D7707E;
+    border-radius: 20px;
+}
+
+#caixa-login {
+    display: block;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px;
+    border: 2px solid #D7707E;
+    border-radius: 20px;
+}
+
+
+/* --------------------------------------------------------------------
+TABS DE ADMIN
+-------------------------------------------------------------------- */
+#admins-tab,
+#users-tab,
+#orders-tab,
+#products-tab {
+    color: #484948;
+}
+
+#admins-tab:hover,
+#users-tab:hover,
+#orders-tab:hover,
+#products-tab:hover {
+    color: black;
+}
+
+#admins-tab.active,
+#users-tab.active,
+#orders-tab.active,
+#products-tab.active {
+    color: #D7707E !important;
+}
+
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: -320px;
+    background-color: #fff;
+    color: #333;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    font-weight: 500;
+    z-index: 9999;
+    transition: right 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.toast-notification.show {
+    right: 20px;
+    opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------
+TABELAS DE ADMIN
+-------------------------------------------------------------------- */
+.products-table-wrapper {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 5px #D7707E;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.products-table-wrapper th {
+    background-color: #FFE6EE;
+    color: #484948;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    font-family: "Bitcount Prop Single", sans-serif;
+    border-bottom: 2px solid #D7707E;
+}
+
+.products-table-wrapper td {
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+    color: #484948;
+    border-bottom: 1px solid #D7707E;
+}
+
+.products-table-wrapper td img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 8px;
+}
+
+.products-table-wrapper th:nth-child(1),
+.products-table-wrapper td:nth-child(1) { width: 6%; }
+.products-table-wrapper th:nth-child(2),
+.products-table-wrapper td:nth-child(2) { width: 6%; }
+.products-table-wrapper th:nth-child(3),
+.products-table-wrapper td:nth-child(3) { width: 12.5%; }
+.products-table-wrapper th:nth-child(4),
+.products-table-wrapper td:nth-child(4) { width: 12.5%; }
+.products-table-wrapper th:nth-child(5),
+.products-table-wrapper td:nth-child(5) { width: 19%; }
+.products-table-wrapper th:nth-child(6),
+.products-table-wrapper td:nth-child(6) { width: 12.5%; }
+.products-table-wrapper th:nth-child(7),
+.products-table-wrapper td:nth-child(7) { width: 6%; }
+.products-table-wrapper th:nth-child(8),
+.products-table-wrapper td:nth-child(8) { width: 25%; }
+
+.order-table-wrapper {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 5px #D7707E;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.order-table-wrapper th {
+    background-color: #FFE6EE;
+    color: #484948;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    font-family: "Bitcount Prop Single", sans-serif;
+    border-bottom: 2px solid #D7707E;
+}
+
+.order-table-wrapper td {
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+    color: #484948;
+    border-bottom: 1px solid #D7707E;
+}
+
+/* --------------------------------------------------------------------
+FOTO DA SECÇÃO DE DÚVIDAS
+-------------------------------------------------------------------- */
+.duvidas-photo {
+    width: 50%;
+    min-width: 330px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #D7707E;
+}
+
+
+
+
+
+
+
